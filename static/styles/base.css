@@ -1,0 +1,14 @@
+html,
+body {
+  background: rgb(240, 243, 249);
+  color: rgb(63, 68, 84);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 13px;
+  height: 100%;
+  line-height: 1.538;
+  min-height: 100%;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
