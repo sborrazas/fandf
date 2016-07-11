@@ -1,122 +1,70 @@
 import React, { Component } from "react";
-import { useSheet } from "../../jss.js";
-import domClasses from "../../utils/dom/classes.js";
+import { connectStyles } from "utils/styles.js";
+import styles from "./MainHeader.less";
 
-class Header extends Component {
+class MainHeader extends Component {
   render() {
-    const { classes } = this.props.sheet;
+    const { classes } = this.props;
 
     return (
-      <header className={classes.base}>{this.props.children}</header>
+      <header className={classes.mainHeader()}>{this.props.children}</header>
     );
   }
 };
 
-Header = useSheet(Header, {
-  base: {
-    "background": "rgb(89, 100, 111)",
-    "border-bottom": "1px solid rgb(63, 68, 84)",
-    "height": "80px",
-    "padding": "0 30px"
-  }
-});
+MainHeader = connectStyles(MainHeader, styles);
 
 class Title extends Component {
   render() {
-    const { classes } = this.props.sheet;
+    const { classes } = this.props;
 
     return (
-      <h1 className={classes.base}>{this.props.children}</h1>
+      <h1 className={classes.title()}>{this.props.children}</h1>
     );
   }
 };
 
-Title = useSheet(Title, {
-  base: {
-    "color": "rgb(252, 252, 252)",
-    "float": "left",
-    "font-size": "20px",
-    "letter-spacing": "0.3em",
-    "line-height": "80px",
-    "text-transform": "uppercase"
-  }
-});
+Title = connectStyles(Title, styles);
 
 class Nav extends Component {
   render() {
-    const { classes } = this.props.sheet;
+    const { classes } = this.props;
 
     return (
-      <nav className={classes.base}>{this.props.children}</nav>
+      <nav className={classes.nav()}>{this.props.children}</nav>
     );
   }
 };
 
-Nav = useSheet(Nav, {
-  base: {
-    "float": "right"
-  }
-});
+Nav = connectStyles(Nav, styles);
 
 class NavItem extends Component {
-  constructor(props) {
-    super(props);
-
-    this._click = this._click.bind(this);
-  }
   render() {
-    const { classes } = this.props.sheet;
-    const className = domClasses.set({
-      [classes.base]: true,
-      [classes.link]: this.props.onClick,
-      [classes.active]: this.props.active
-    });
+    const { classes } = this.props;
 
-    if (this.props.onClick) {
-      return (
-        <span onClick={this._click} className={className}>
-          {this.props.children}
-        </span>
-      );
-    }
-    else {
-      return (
-        <span className={className}>{this.props.children}</span>
-      );
-    }
-  }
-  _click(event) {
-    if (this.props.onClick) {
-      event.preventDefault();
-      this.props.onClick();
-    }
+    return (<div>{this.props.children}</div>);
+    // const className = domClasses.set({
+    //   [classes.base]: true,
+    //   [classes.link]: this.props.onClick,
+    //   [classes.active]: this.props.active
+    // });
+
+    // if (this.props.onClick) {
+    //   return (
+    //     <span onClick={this._click} className={className}>
+    //       {this.props.children}
+    //     </span>
+    //   );
+    // }
+    // else {
+    //   return (
+    //     <span className={className}>{this.props.children}</span>
+    //   );
+    // }
   }
 };
 
-NavItem = useSheet(NavItem, {
-  base: {
-    "float": "left",
-    "line-height": "80px",
-    "padding": "0 15px"
-  },
-  link: {
-    "color": "rgba(252, 252, 252, 0.6)",
-    "cursor": "pointer",
-    "font-weight": "bold",
-    "font-size": "12px",
-    "text-decoration": "none",
-    "text-transform": "uppercase",
-    "transition": [
-      "color 0.3s"
-    ],
-    "&:hover": {
-      "color": "rgba(252, 252, 252, 1)"
-    }
-  },
-  active: {
-    "color": "rgba(252, 252, 252, 0.9)"
-  }
-});
+NavItem = connectStyles(NavItem, styles);
 
-export default Header;
+export default MainHeader;
 export { Title, Nav, NavItem };

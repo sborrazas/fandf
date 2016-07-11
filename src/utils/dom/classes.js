@@ -1,28 +1,19 @@
-import object from "../object.js";
+import _ from "lodash";
 
 const classes = {
   set(...args) {
     let className = "";
 
-    for (var arg of args) {
+    _.forOwn(args, (arg) => {
       const argtype = typeof arg;
 
-      if (arg) {
-        if ("string" === argtype) {
-          className += " " + arg;
-        }
-        else if (Array.isArray(arg)) {
-          className += " " + classes.set(arg);
-        }
-        else if (object.isObject(arg)) {
-          object.each(arg, (key, val) => {
-            if (val) {
-              className += " " + key;
-            }
-          });
-        }
+      if (arg && typeof arg === "string") {
+        className += " " + arg;
       }
-    }
+      else {
+        throw new Error(`Invalid class name \`${arg}\`, it must be a string.`);
+      }
+    });
 
     return className.substr(1);
   }

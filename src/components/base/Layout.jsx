@@ -1,70 +1,46 @@
 import React, { Component } from "react";
-import { useSheet } from "../../jss.js";
-
-class Wrapper extends Component {
-  render() {
-    const { classes } = this.props.sheet;
-
-    return (
-      <div className={classes.base}>{this.props.children}</div>
-    );
-  }
-};
-
-Wrapper = useSheet(Wrapper, {
-  base: {
-    "max-width": "800px",
-    "margin": "0 auto"
-  }
-});
+import styles from "./Layout.less";
+import { connectStyles } from "utils/styles.js";
 
 class Layout extends Component {
   render() {
-    const { classes } = this.props.sheet;
+    const { classes } = this.props;
 
     return (
-      <div className={classes.base}>{this.props.children}</div>
+      <div className={classes.layout()}>{this.props.children}</div>
     );
   }
 };
 
-Layout = useSheet(Layout, {
-  base: {
-    "background": "yellow"
-  }
-});
+Layout = connectStyles(Layout, styles);
 
 class Header extends Component {
   render() {
-    const { classes } = this.props.sheet;
+    const { classes } = this.props;
 
     return (
-      <div className={classes.base}>
+      <div className={classes.header()}>
         {this.props.children}
       </div>
     );
   }
 };
 
-Header = useSheet(Header, {
-  base: {}
-});
+Header = connectStyles(Header, styles);
 
 class Content extends Component {
   render() {
-    const { classes } = this.props.sheet;
+    const { classes } = this.props;
 
     return (
-      <main className={classes.base}>
+      <main className={classes.content()}>
         {this.props.children}
       </main>
     );
   }
 };
 
-Content = useSheet(Content, {
-  base: {}
-});
+Content = connectStyles(Content, styles);
 
 export default Layout;
-export { Header, Content, Wrapper };
+export { Header, Content, };

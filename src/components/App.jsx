@@ -1,40 +1,10 @@
 import React, { Component } from "react";
-import MainHeader, {
-  Title as MainHeaderTitle,
-  Nav as MainHeaderNav,
-  NavItem as MainHeaderNavItem
-} from "./base/MainHeader.jsx";
-import Layout, {
-  Header as LayoutHeader,
-  Content as LayoutContent,
-  Wrapper as LayoutWrapper
-} from "./base/Layout.jsx";
-import Button from "./base/Button.jsx";
+import { Router, hashHistory } from "react-router";
 
 class App extends Component {
   render() {
     return (
-      <Layout>
-        <LayoutHeader>
-          <MainHeader>
-            <MainHeaderTitle>Shopping</MainHeaderTitle>
-            <MainHeaderNav>
-              <MainHeaderNavItem>
-                <Button>
-                  Buy now!
-                </Button>
-              </MainHeaderNavItem>
-              <MainHeaderNavItem>
-                Cart
-              </MainHeaderNavItem>
-              <MainHeaderNavItem>
-                My account
-              </MainHeaderNavItem>
-            </MainHeaderNav>
-          </MainHeader>
-        </LayoutHeader>
-        <LayoutContent>Content!</LayoutContent>
-      </Layout>
+      <Router history={hashHistory} routes={this.props.routes} />
     );
   }
 };
