@@ -16,11 +16,12 @@ module.exports = {
     extensions: ["", ".js", ".jsx"],
     alias: {
       components: path.join(__dirname, "src", "components"),
+      config: path.join(__dirname, "src", "config"),
       utils: path.join(__dirname, "src", "utils"),
     }
   },
   output: {
-    path: path.join(__dirname, "public"),
+    path: path.join(__dirname, "dist"),
     filename: "index.js",
     libraryTarget: "umd",
   },

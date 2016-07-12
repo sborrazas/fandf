@@ -1,0 +1,15 @@
+---
+- hosts: all
+  remote_user: "{{ user }}"
+  roles:
+    - role: "gaqzi.ssh-config"
+    - role: "common"
+    - role: "common.remote"
+    - role: "webserver"
+
+- hosts: all
+  remote_user: "{{ user }}"
+  vars:
+    repo_version: "master"
+  roles:
+    - role: "deploy"
