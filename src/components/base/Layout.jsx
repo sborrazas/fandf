@@ -14,6 +14,18 @@ class Layout extends Component {
 
 Layout = connectStyles(Layout, styles);
 
+class Wrapper extends Component {
+  render() {
+    const { classes } = this.props;
+
+    return (
+      <div className={classes.wrapper()}>{this.props.children}</div>
+    );
+  }
+};
+
+Wrapper = connectStyles(Wrapper, styles);
+
 class Header extends Component {
   render() {
     const { classes } = this.props;
@@ -42,5 +54,19 @@ class Content extends Component {
 
 Content = connectStyles(Content, styles);
 
+class Footer extends Component {
+  render() {
+    const { classes } = this.props;
+
+    return (
+      <footer className={classes.footer()}>
+        {this.props.children}
+      </footer>
+    );
+  }
+};
+
+Footer = connectStyles(Footer, styles);
+
 export default Layout;
-export { Header, Content, };
+export { Header, Content, Wrapper, Footer, };

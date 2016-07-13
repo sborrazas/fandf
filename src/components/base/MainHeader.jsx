@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router";
 import { connectStyles } from "utils/styles.js";
 import styles from "./MainHeader.less";
 
@@ -14,14 +15,50 @@ class MainHeader extends Component {
 
 MainHeader = connectStyles(MainHeader, styles);
 
-class Title extends Component {
+class Logo extends Component {
   render() {
     const { classes } = this.props;
 
     return (
-      <h1 className={classes.title()}>{this.props.children}</h1>
+      <Link to={this.props.to}>
+        <img
+          src={this.props.src}
+          className={classes.logo()}
+          alt={this.props.alt} />
+      </Link>
     );
   }
+};
+
+Logo.propTypes = {
+  alt: React.PropTypes.string.isRequired,
+  src: React.PropTypes.string.isRequired,
+};
+
+Logo = connectStyles(Logo, styles);
+
+class Title extends Component {
+  render() {
+    const { classes, secondary } = this.props;
+    const className = classes.title({
+      secondary: secondary,
+    });
+
+    if (secondary) {
+      return (
+        <h2 className={className}>{this.props.children}</h2>
+      );
+    }
+    else {
+      return (
+        <h1 className={className}>{this.props.children}</h1>
+      );
+    }
+  }
+};
+
+Title.propTypes = {
+  secondary: React.PropTypes.bool,
 };
 
 Title = connectStyles(Title, styles);
@@ -31,7 +68,7 @@ class Nav extends Component {
     const { classes } = this.props;
 
     return (
-      <nav className={classes.nav()}>{this.props.children}</nav>
+      <nav className={classes.nav()}><ul>{this.props.children}</ul></nav>
     );
   }
 };
@@ -42,29 +79,15 @@ class NavItem extends Component {
   render() {
     const { classes } = this.props;
 
-    return (<div>{this.props.children}</div>);
-    // const className = domClasses.set({
-    //   [classes.base]: true,
-    //   [classes.link]: this.props.onClick,
-    //   [classes.active]: this.props.active
-    // });
-
-    // if (this.props.onClick) {
-    //   return (
-    //     <span onClick={this._click} className={className}>
-    //       {this.props.children}
-    //     </span>
-    //   );
-    // }
-    // else {
-    //   return (
-    //     <span className={className}>{this.props.children}</span>
-    //   );
-    // }
+    return (
+      <li className={classes.navItem()}>
+        {this.props.children}
+      </li>
+    );
   }
 };
 
 NavItem = connectStyles(NavItem, styles);
 
 export default MainHeader;
-export { Title, Nav, NavItem };
+export { Logo, Title, Nav, NavItem };
