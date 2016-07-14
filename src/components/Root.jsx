@@ -3,6 +3,7 @@ import "components/base/reset.less";
 import "components/base/base.less";
 
 import React, { Component } from "react";
+import htmlEncoder from "utils/htmlEncoder.js";
 import MainHeader, {
   Logo as MainHeaderLogo,
   Title as MainHeaderTitle,
@@ -26,7 +27,11 @@ import {
   NAME,
   TAGLINE,
   DESCRIPTION,
+  SOCIAL,
 } from "config/settings.js";
+
+const { TWITTER, INSTAGRAM, EMAIL, } = SOCIAL;
+const ENCODED_EMAIL = htmlEncoder(EMAIL);
 
 class App extends Component {
   render() {
@@ -41,13 +46,15 @@ class App extends Component {
                 alt="Form & Function logo" />
               <MainHeaderNav>
                 <MainHeaderNavItem>
-                  <Link to="google.com">hello@fandf.io</Link>
+                  <Link to={`mailto:${ENCODED_EMAIL}`} external={true}>
+                    {ENCODED_EMAIL}
+                  </Link>
                 </MainHeaderNavItem>
                 <MainHeaderNavItem>
-                  <Link to="google.com">Twitter</Link>
+                  <Link to={TWITTER} external={true}>Twitter</Link>
                 </MainHeaderNavItem>
                 <MainHeaderNavItem>
-                  <Link to="google.com">Instagram</Link>
+                  <Link to={INSTAGRAM} external={true}>Instagram</Link>
                 </MainHeaderNavItem>
               </MainHeaderNav>
               <MainHeaderTitle>{TAGLINE}</MainHeaderTitle>
@@ -55,20 +62,26 @@ class App extends Component {
             </LayoutWrapper>
           </MainHeader>
         </LayoutHeader>
-        <LayoutContent>{this.props.children}</LayoutContent>
+        <LayoutContent>
+          <LayoutWrapper>
+            {this.props.children}
+          </LayoutWrapper>
+        </LayoutContent>
         <LayoutFooter>
           <MainFooter>
             <LayoutWrapper>
               <MainFooterTitle>Want to work together? Say hi!</MainFooterTitle>
               <MainFooterNav>
                 <MainFooterNavItem>
-                  <Link to="google.com">hello@fandf.io</Link>
+                  <Link to={`mailto:${ENCODED_EMAIL}`} external={true}>
+                    {ENCODED_EMAIL}
+                  </Link>
                 </MainFooterNavItem>
                 <MainFooterNavItem>
-                  <Link to="google.com">Twitter</Link>
+                  <Link to={TWITTER} external={true}>Twitter</Link>
                 </MainFooterNavItem>
                 <MainFooterNavItem>
-                  <Link to="google.com">Instagram</Link>
+                  <Link to={INSTAGRAM} external={true}>Instagram</Link>
                 </MainFooterNavItem>
               </MainFooterNav>
             </LayoutWrapper>

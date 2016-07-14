@@ -25,11 +25,11 @@ const connectStyles = (DecoratedComponent, classesMap) => {
       if (!cElement) {
         cElement = cBlock;
       }
+      if (!modifiersMap[cElement]) {
+        modifiersMap[cElement] = {};
+      }
 
       if (cModifier) {
-        if (!modifiersMap[cElement]) {
-          modifiersMap[cElement] = {};
-        }
         modifiersMap[cElement][cModifier] = destClassName;
       }
       else {
@@ -45,6 +45,13 @@ const connectStyles = (DecoratedComponent, classesMap) => {
       if (modifiersSelection) {
         _.forOwn(modifiersSelection, (isActive, modifierName) => {
           const modifierClassName = modifiersMap[componentName][modifierName];
+
+          if (!modifierClassName) {
+            throw new Error(
+              `Modifier \`${modifierName}\` of component \`${componentName}\`` +
+                ` does not exist.`
+            );
+          }
 
           if (isActive) {
             className = domClasses.set(className, modifierClassName);
