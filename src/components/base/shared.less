@@ -1,0 +1,29 @@
+.m-maxMedia(@maxWidth, @rules) {
+  @media screen and (max-width: @maxWidth) {
+    @rules();
+  }
+}
+
+.m-minMedia(@minWidth, @rules) {
+  @media screen and (min-width: @maxWidth) {
+    @rules();
+  }
+}
+
+.m-mediaQueryTest() {
+  .m-maxMedia(@media-breakpoint-5, {
+    body { color: blue; }
+  });
+  .m-maxMedia(@media-breakpoint-4, {
+    body { color: green; }
+  });
+  .m-maxMedia(@media-breakpoint-3, {
+    body { color: yellow; }
+  });
+  .m-maxMedia(@media-breakpoint-2, {
+    body { color: orange; }
+  });
+  .m-maxMedia(@media-breakpoint-1, {
+    body { color: red; }
+  });
+}

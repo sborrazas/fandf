@@ -13,7 +13,7 @@ class MainHeader extends Component {
     return (
       <header className={classes.mainHeader()}>
         <LayoutWrapper>
-          <div className={classes.inner()}>{this.props.children}</div>
+          {this.props.children}
         </LayoutWrapper>
       </header>
     );

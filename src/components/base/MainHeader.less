@@ -1,12 +1,10 @@
-.mainHeader {
-  background: rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
-}
+@import "variables.less";
+@import "shared.less";
 
-.mainHeader-inner {
-  background: url("./components/base/images/header-background.png") rgb(0, 0, 0) no-repeat bottom center;
-  background-size: contain;
-  padding: 72px 0 200px;
+.mainHeader {
+  background: url("./components/base/images/header-background.png") rgb(0, 0, 0) no-repeat center 100%;
+  color: rgb(255, 255, 255);
+  padding: 72px 0 400px;
 }
 
 .mainHeader-logo {
@@ -34,3 +32,35 @@
   display: inline-block;
   margin-left: 40px;
 }
+
+.m-maxMedia(@media-breakpoint-5, {
+  .mainHeader {
+    background-position: 25% 110%;
+    background-size: 117%;
+    padding-bottom: 24%;
+  }
+});
+
+.m-maxMedia(@media-breakpoint-3, {
+  .mainHeader {
+    background-size: 200%;
+    background-position-y: 114%;
+  }
+  .mainHeader-logo {
+    display: block;
+    margin: 0 auto 50px;
+  }
+  .mainHeader-nav {
+    float: none;
+    text-align: center;
+  }
+  .mainHeader-navItem {
+    margin: 0 20px;
+  }
+});
+
+.m-maxMedia(@media-breakpoint-2, {
+  .mainHeader {
+    background-position-y: 104%;
+  }
+});

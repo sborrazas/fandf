@@ -1,5 +1,4 @@
 /* Base styles. TODO: Import them from somewhere else */
-import "components/base/reset.less";
 import "components/base/base.less";
 
 import React, { Component } from "react";
