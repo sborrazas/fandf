@@ -2,13 +2,20 @@ import React, { Component } from "react";
 import { Link } from "react-router";
 import { connectStyles } from "utils/styles.js";
 import styles from "./MainFooter.less";
+import {
+  Wrapper as LayoutWrapper
+} from "./Layout.jsx";
 
 class MainFooter extends Component {
   render() {
     const { classes } = this.props;
 
     return (
-      <header className={classes.mainFooter()}>{this.props.children}</header>
+      <footer className={classes.mainFooter()}>
+        <LayoutWrapper>
+          <div className={classes.inner()}>{this.props.children}</div>
+        </LayoutWrapper>
+      </footer>
     );
   }
 };

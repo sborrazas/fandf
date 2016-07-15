@@ -20,7 +20,9 @@
     "less-loader": "^2.2.1",
     "static-site-generator-webpack-plugin": "^2.1.0",
     "style-loader": "^0.13.0",
-    "webpack": "^1.12.14"
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.14",
+    "webpack-isomorphic-tools": "^2.2.18"
   },
   "scripts": {
     "start": "webpack --config dev.webpack.config.js --watch",

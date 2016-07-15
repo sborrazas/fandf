@@ -1,4 +1,8 @@
 var path = require("path");
+var WebpackIsomorphicToolsPlugin = require("webpack-isomorphic-tools/plugin");
+var webpackIsomorphicToolsPlugin = new WebpackIsomorphicToolsPlugin(
+  require("./webpack.isomorphictools.config.js")
+);
 
 module.exports = {
   entry: path.join(__dirname, "src", "index.js"),
@@ -17,6 +21,7 @@ module.exports = {
     path: path.join(__dirname, "public"),
     filename: "index.js",
   },
+  progress: true,
   module: {
     loaders: [
       {
@@ -31,6 +36,10 @@ module.exports = {
         test: /\.less$/,
         loader: "style!css?modules&importLoaders=2&sourceMap&localIdentName=[local]___[hash:base64:5]!autoprefixer?browsers=last 2 version!less?outputStyle=expanded&sourceMap",
       },
-    ]
+      {
+        test: webpackIsomorphicToolsPlugin.regular_expression("images"),
+        loader: "url-loader?limit=153600",
+      },
+    ],
   },
 };

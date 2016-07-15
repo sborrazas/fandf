@@ -1,10 +1,13 @@
 var path = require("path");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 const StaticSiteGeneratorPlugin = require("static-site-generator-webpack-plugin");
+var WebpackIsomorphicToolsPlugin = require("webpack-isomorphic-tools/plugin");
+var webpackIsomorphicToolsPlugin = new WebpackIsomorphicToolsPlugin(
+  require("./webpack.isomorphictools.config.js")
+);
 
 const PATHS = [
   "/",
-  "/about",
 ];
 
 module.exports = {
@@ -41,6 +44,10 @@ module.exports = {
           "style",
           "css?modules&importLoaders=2&sourceMap!autoprefixer-loader?browsers=last 2 versions!less?outputStyle=expanded&sourceMap=true&sourceMapContents=true"
         ),
+      },
+      {
+        test: webpackIsomorphicToolsPlugin.regular_expression("images"),
+        loader: "url-loader?limit=153600",
       },
     ]
   },

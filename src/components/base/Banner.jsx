@@ -4,12 +4,20 @@ import styles from "./Banner.less";
 
 class Banner extends Component {
   render() {
-    const { classes } = this.props;
+    const { classes, imgSrc, alt } = this.props;
 
     return (
-      <section className={classes.banner()}>{this.props.children}</section>
+      <section className={classes.banner()}>
+        <img className={classes.img()} src={imgSrc} alt={alt} />
+        {this.props.children}
+      </section>
     );
   }
+};
+
+Banner.propTypes = {
+  alt: React.PropTypes.string.isRequired,
+  imgSrc: React.PropTypes.string.isRequired,
 };
 
 Banner = connectStyles(Banner, styles);

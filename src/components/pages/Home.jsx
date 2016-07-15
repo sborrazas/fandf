@@ -31,7 +31,10 @@ class Home extends Component {
     return (
       <Root>
         <Header><HeaderTitle>Selected work</HeaderTitle></Header>
-        <Banner imgSrc="/images/gallery/roam.png">
+        <Banner
+          imgSrc="/images/portfolio/roam.png"
+          alt="Roam">
+
           <BannerTitle>Roam App</BannerTitle>
           Your favorite place to discover and collect the best travel
           destinations.
@@ -39,7 +42,10 @@ class Home extends Component {
             <Button disabled={true}>Coming soon</Button>
           </BannerNav>
         </Banner>
-        <Banner imgSrc="/images/gallery/world-news.png">
+        <Banner
+          imgSrc="/images/portfolio/worldnews.png"
+          alt="WorldNews">
+
           <BannerTitle>WorldNews</BannerTitle>
           Enjoy the most popular news of the day curated by the Reddit
           community.
@@ -49,7 +55,10 @@ class Home extends Component {
             </Button>
           </BannerNav>
         </Banner>
-        <Banner imgSrc="/images/gallery/pet-finder.png">
+        <Banner
+          imgSrc="/images/portfolio/petfinder.png"
+          alt="Petfinder">
+
           <BannerTitle>PetFinder</BannerTitle>
           Find your lost pet, help lost pet find their owner and help pets
           find a home.
@@ -65,20 +74,20 @@ class Home extends Component {
             imgSrc="/images/portfolio/shipit.png"
             alt="Ship.it — Crowdsourced Delivery" />
           <TilesItem
-            imgSrc="/images/portfolio/shipit.png"
-            alt="Ship.it — Crowdsourced Delivery" />
+            imgSrc="/images/portfolio/brooklyn-color.png"
+            alt="Brooklyn" />
           <TilesItem
-            imgSrc="/images/portfolio/shipit.png"
-            alt="Ship.it — Crowdsourced Delivery" />
+            imgSrc="/images/portfolio/npr.png"
+            alt="NPR Player" />
           <TilesItem
-            imgSrc="/images/portfolio/shipit.png"
-            alt="Ship.it — Crowdsourced Delivery" />
+            imgSrc="/images/portfolio/pica-logo.png"
+            alt="Lamp" />
           <TilesItem
-            imgSrc="/images/portfolio/shipit.png"
-            alt="Ship.it — Crowdsourced Delivery" />
+            imgSrc="/images/portfolio/dribbble-shot.png"
+            alt="Watchlist — Keep track of what movies you want to watch" />
           <TilesItem
-            imgSrc="/images/portfolio/shipit.png"
-            alt="Ship.it — Crowdsourced Delivery" />
+            imgSrc="/images/portfolio/anto-dribbble.png"
+            alt="Antonella — Portfolio" />
         </Tiles>
         <Section>
           <SectionItem>

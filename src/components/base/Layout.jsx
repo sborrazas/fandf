@@ -46,7 +46,7 @@ class Content extends Component {
 
     return (
       <main className={classes.content()}>
-        {this.props.children}
+        <Wrapper>{this.props.children}</Wrapper>
       </main>
     );
   }
@@ -59,9 +59,9 @@ class Footer extends Component {
     const { classes } = this.props;
 
     return (
-      <footer className={classes.footer()}>
+      <div className={classes.footer()}>
         {this.props.children}
-      </footer>
+      </div>
     );
   }
 };

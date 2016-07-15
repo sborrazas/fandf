@@ -2,13 +2,20 @@ import React, { Component } from "react";
 import { Link } from "react-router";
 import { connectStyles } from "utils/styles.js";
 import styles from "./MainHeader.less";
+import {
+  Wrapper as LayoutWrapper
+} from "./Layout.jsx";
 
 class MainHeader extends Component {
   render() {
     const { classes } = this.props;
 
     return (
-      <header className={classes.mainHeader()}>{this.props.children}</header>
+      <header className={classes.mainHeader()}>
+        <LayoutWrapper>
+          <div className={classes.inner()}>{this.props.children}</div>
+        </LayoutWrapper>
+      </header>
     );
   }
 };
@@ -33,6 +40,7 @@ class Logo extends Component {
 Logo.propTypes = {
   alt: React.PropTypes.string.isRequired,
   src: React.PropTypes.string.isRequired,
+  to: React.PropTypes.string.isRequired,
 };
 
 Logo = connectStyles(Logo, styles);

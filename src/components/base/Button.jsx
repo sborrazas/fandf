@@ -41,7 +41,7 @@ class Button extends Component {
 Button.propTypes = {
   disabled: React.PropTypes.bool,
   external: React.PropTypes.bool,
-  to: React.PropTypes.bool,
+  to: React.PropTypes.string,
 };
 
 Button = connectStyles(Button, styles);
