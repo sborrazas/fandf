@@ -1,7 +1,10 @@
 import React, { Component } from "react";
-import paper, { Path, Point, Size } from "paper/dist/paper-full.js";
 import styles from "./Splash.less";
 import { connectStyles } from "utils/styles.js";
+import global from "utils/global.js";
+
+const { paper = {} } = (global || {});
+const { Path, Point, Size } = paper;
 
 /**
  * Extracted from Paper.js examples.
