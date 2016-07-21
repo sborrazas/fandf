@@ -9,6 +9,7 @@ class Button extends Component {
   render() {
     const { classes, disabled, to, external } = this.props;
     const className = classes.button({
+      active: !disabled,
       disabled: disabled,
     });
 
