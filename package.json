@@ -1,10 +1,11 @@
 {
-  "name": "static-skeleton",
+  "name": "form-and-function",
   "version": "1.0.0",
-  "description": "Static skeleton with ReactJS.",
+  "description": "We are a small team of creative professionals that are passionate about partnering with purpose-driven businesses and startups to craft unique product solutions.",
   "main": "webpack.config.js",
   "dependencies": {
     "lodash": "^4.2.1",
+    "paper": "^0.10.2",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-router": "^2.4.0"

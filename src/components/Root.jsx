@@ -63,20 +63,16 @@ class App extends Component {
         </LayoutContent>
         <LayoutFooter>
           <MainFooter>
-            <MainFooterTitle>Want to work together? Say hi!</MainFooterTitle>
-            <MainFooterNav>
-              <MainFooterNavItem>
-                <Link to={`mailto:${ENCODED_EMAIL}`} external={true}>
-                  {ENCODED_EMAIL}
-                </Link>
-              </MainFooterNavItem>
-              <MainFooterNavItem>
-                <Link to={TWITTER} external={true}>Twitter</Link>
-              </MainFooterNavItem>
-              <MainFooterNavItem>
-                <Link to={INSTAGRAM} external={true}>Instagram</Link>
-              </MainFooterNavItem>
-            </MainFooterNav>
+            <MainFooterTitle>Want to work together?</MainFooterTitle>
+            Send us an email to
+            {" "}<Link to={`mailto:${ENCODED_EMAIL}`} external={true}>
+              {ENCODED_EMAIL}
+            </Link>
+            {" "}or reach us in
+            {" "}<Link to={TWITTER} external={true}>Twitter</Link>
+            {" "}or
+            {" "}<Link to={INSTAGRAM} external={true}>Instagram</Link>.
+            We'd love to chat.
           </MainFooter>
         </LayoutFooter>
       </Layout>

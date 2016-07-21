@@ -1,50 +1,25 @@
-@import "variables.less";
-@import "shared.less";
-
 .mainFooter {
-  background: url("./components/base/images/footer-background.png") rgb(0, 0, 0) no-repeat center top;
+  background: rgb(31, 31, 31);
   color: rgb(255, 255, 255);
-  padding: 400px 0 200px;
-  text-align: center;
+  font-size: 32px;
+  font-weight: 300;
+  padding: 300px 0 200px;
+  position: relative;
+}
+
+.mainFooter-inner {
+  padding-right: 20%;
 }
 
 .mainFooter-title {
-  font-size: 32px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  text-transform: uppercase;
 }
 
-.mainFooter-nav {
-  font-size: 22px;
-  margin-top: 20px;
+.mainFooter-splash {
+  position: absolute;
+  width: 100%;
+  top: 0;
 }
-
-.mainFooter-navItem {
-  display: inline-block;
-  margin: 18px;
-}
-
-.mainFooter-navItem:last-child {
-  border-right: none;
-  margin-right: 0;
-  padding-right: 0;
-}
-
-.m-maxMedia(@media-breakpoint-5, {
-  .mainFooter {
-    background-position: 25% -4%;
-    background-size: 117%;
-    padding: 24% 0;
-  }
-});
-
-.m-maxMedia(@media-breakpoint-3, {
-  .mainFooter {
-    background-position-y: -30%;
-    background-size: 200%;
-  }
-});
-
-.m-maxMedia(@media-breakpoint-2, {
-  .mainFooter {
-    background-position-y: -10%;
-  }
-});

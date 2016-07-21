@@ -17,13 +17,7 @@ import Banner, {
 import Header, {
   Title as HeaderTitle,
 } from "components/base/Header.jsx";
-import Tiles, {
-  Item as TilesItem,
-} from "components/base/Tiles.jsx";
-import Section, {
-  Item as SectionItem,
-  ItemTitle as SectionItemTitle,
-} from "components/base/Section.jsx";
+import Paragraph from "components/base/Paragraph.jsx";
 import Button from "components/base/Button.jsx";
 
 class Home extends Component {
@@ -68,41 +62,18 @@ class Home extends Component {
             </Button>
           </BannerNav>
         </Banner>
-        <Header><HeaderTitle>Recent work</HeaderTitle></Header>
-        <Tiles>
-          <TilesItem
-            imgSrc="/images/portfolio/shipit.png"
-            alt="Ship.it — Crowdsourced Delivery" />
-          <TilesItem
-            imgSrc="/images/portfolio/brooklyn-color.png"
-            alt="Brooklyn" />
-          <TilesItem
-            imgSrc="/images/portfolio/npr.png"
-            alt="NPR Player" />
-          <TilesItem
-            imgSrc="/images/portfolio/pica-logo.png"
-            alt="Lamp" />
-          <TilesItem
-            imgSrc="/images/portfolio/dribbble-shot.png"
-            alt="Watchlist — Keep track of what movies you want to watch" />
-          <TilesItem
-            imgSrc="/images/portfolio/anto-dribbble.png"
-            alt="Antonella — Portfolio" />
-        </Tiles>
-        <Section>
-          <SectionItem>
-            <SectionItemTitle>The way we work</SectionItemTitle>
-            Our team is proficient in an array of services that can help elevate
-            and empower your company or organization. We work with you to build
-            comprehensive, identities and experiences.
-          </SectionItem>
-          <SectionItem>
-            <SectionItemTitle>What we do</SectionItemTitle>
-            Branding, Information Architecture, Interface Design, User
-            Experience Design, Visual Design, Responsive Design, Development
-            Consulting, Front-end Development, iOS Development.
-          </SectionItem>
-        </Section>
+        <Header><HeaderTitle>The way we work</HeaderTitle></Header>
+        <Paragraph>
+          Our team is proficient in an array of services that can help elevate
+          and empower your company or organization. We work with you to build
+          comprehensive, identities and experiences.
+        </Paragraph>
+        <Header><HeaderTitle>What we do</HeaderTitle></Header>
+        <Paragraph>
+          Branding, Information Architecture, Interface Design, User
+          Experience Design, Visual Design, Responsive Design, Development
+          Consulting, Front-end Development, iOS Development.
+        </Paragraph>
       </Root>
     );
   }
