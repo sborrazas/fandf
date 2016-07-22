@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { Router, hashHistory } from "react-router";
+import { Router, browserHistory } from "react-router";
 
 class App extends Component {
   render() {
     return (
-      <Router history={hashHistory} routes={this.props.routes} />
+      <Router history={browserHistory} routes={this.props.routes} />
     );
   }
 };
