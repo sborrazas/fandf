@@ -72,7 +72,6 @@ class StaticApp extends Component {
           <div id="app">
             <RouterContext {...routerProps} />
           </div>
-          <script type="text/javascript" src="/vendor/paper-full.js"></script>
           <script type="text/javascript" src="/index.js"></script>
           <script dangerouslySetInnerHTML={{ __html: ANALYTICS_CODE }} />
         </body>
