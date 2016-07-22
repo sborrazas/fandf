@@ -5,7 +5,6 @@ import styles from "./MainHeader.less";
 import {
   Wrapper as LayoutWrapper
 } from "./Layout.jsx";
-import Splash from "./Splash.jsx";
 
 class MainHeader extends Component {
   render() {
@@ -16,9 +15,6 @@ class MainHeader extends Component {
         <LayoutWrapper>
           {this.props.children}
         </LayoutWrapper>
-        <div className={classes.splash()}>
-          <Splash />
-        </div>
       </header>
     );
   }

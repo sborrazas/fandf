@@ -5,7 +5,6 @@ import styles from "./MainFooter.less";
 import {
   Wrapper as LayoutWrapper
 } from "./Layout.jsx";
-import Splash from "./Splash.jsx";
 
 class MainFooter extends Component {
   render() {
@@ -13,9 +12,6 @@ class MainFooter extends Component {
 
     return (
       <footer className={classes.mainFooter()}>
-        <div className={classes.splash()}>
-          <Splash inverted={true} />
-        </div>
         <LayoutWrapper>
           <div className={classes.inner()}>{this.props.children}</div>
         </LayoutWrapper>

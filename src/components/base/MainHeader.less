@@ -2,10 +2,8 @@
 @import "shared.less";
 
 .mainHeader {
-  background: rgb(31, 31, 31);
-  color: rgb(255, 255, 255);
   letter-spacing: 0.05em;
-  padding: 72px 0 300px;
+  padding: 72px 0;
   position: relative;
 }
 
@@ -15,13 +13,17 @@
 }
 
 .mainHeader-title {
-  font-size: 32px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.9em;
   margin-top: 75px;
   text-transform: uppercase;
 }
 
 .mainHeader-title--secondary {
-  font-size: 24px;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 1.44em;
   margin-top: 14px;
   text-transform: none;
 }
@@ -44,6 +46,9 @@
 }
 
 .m-maxMedia(@media-breakpoint-3, {
+  .mainHeader {
+    padding-bottom: 0;
+  }
   .mainHeader-logo {
     display: block;
     margin: 0 auto 50px;

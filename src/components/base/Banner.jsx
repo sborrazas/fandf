@@ -8,7 +8,9 @@ class Banner extends Component {
 
     return (
       <section className={classes.banner()}>
-        <img className={classes.img()} src={imgSrc} alt={alt} />
+        <div className={classes.imgWrapper()}>
+          <img className={classes.img()} src={imgSrc} alt={alt} />
+        </div>
         {this.props.children}
       </section>
     );

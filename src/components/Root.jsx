@@ -39,7 +39,7 @@ class App extends Component {
           <MainHeader>
             <MainHeaderLogo
               to="/"
-              src="/images/logo-white.svg"
+              src="/images/logo-black.svg"
               alt="Form & Function logo" />
             <MainHeaderNav>
               <MainHeaderNavItem>
@@ -65,13 +65,29 @@ class App extends Component {
           <MainFooter>
             <MainFooterTitle>Want to work together?</MainFooterTitle>
             Send us an email to
-            {" "}<Link to={`mailto:${ENCODED_EMAIL}`} external={true}>
+            {" "}<Link
+              to={`mailto:${ENCODED_EMAIL}`}
+              external={true}
+              secondary={true}>
+
               {ENCODED_EMAIL}
             </Link>
             {" "}or reach us in
-            {" "}<Link to={TWITTER} external={true}>Twitter</Link>
+            {" "}<Link
+              to={TWITTER}
+              external={true}
+              secondary={true}>
+
+              Twitter
+            </Link>
             {" "}or
-            {" "}<Link to={INSTAGRAM} external={true}>Instagram</Link>.
+            {" "}<Link
+              to={INSTAGRAM}
+              external={true}
+              secondary={true}>
+
+              Instagram
+            </Link>.
             We'd love to chat.
           </MainFooter>
         </LayoutFooter>

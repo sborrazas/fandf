@@ -45,7 +45,7 @@ class Home extends Component {
           community.
           <BannerNav>
             <Button to="http://news.fandf.io" external={true}>
-              Visit site
+              Go to site
             </Button>
           </BannerNav>
         </Banner>
@@ -58,21 +58,20 @@ class Home extends Component {
           find a home.
           <BannerNav>
             <Button to="http://petfinder.fandf.io" external={true}>
-              Visit site
+              Go to site
             </Button>
           </BannerNav>
         </Banner>
         <Header><HeaderTitle>The way we work</HeaderTitle></Header>
         <Paragraph>
-          Our team is proficient in an array of services that can help elevate
-          and empower your company or organization. We work with you to build
-          comprehensive, identities and experiences.
+          We believe in collaboration and we believe in partners. Our
+          transparent process and open communication are the basis for the way
+          we think about and build digital products.
         </Paragraph>
         <Header><HeaderTitle>What we do</HeaderTitle></Header>
         <Paragraph>
-          Branding, Information Architecture, Interface Design, User
-          Experience Design, Visual Design, Responsive Design, Development
-          Consulting, Front-end Development, iOS Development.
+          Branding, Information Architecture, Interface Design, User Experience
+          Design, Visual Design, Responsive Design, Web and Mobile Development.
         </Paragraph>
       </Root>
     );
