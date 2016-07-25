@@ -4,12 +4,18 @@ import styles from "./Header.less";
 
 class Header extends Component {
   render() {
-    const { classes } = this.props;
+    const { classes, desktopOnly } = this.props;
 
     return (
-      <header className={classes.header()}>{this.props.children}</header>
+      <header className={classes.header({ desktopOnly: desktopOnly })}>
+        {this.props.children}
+      </header>
     );
   }
+};
+
+Header.propTypes = {
+  desktopOnly: React.PropTypes.bool,
 };
 
 Header = connectStyles(Header, styles);

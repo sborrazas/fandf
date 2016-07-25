@@ -1,9 +1,19 @@
+@import "variables.less";
+@import "shared.less";
+
 .header {
-  margin: 70px 0 20px;
+  margin-bottom: 1.1em;
 }
 
+.m-maxMedia(@media-breakpoint-3, {
+  .header--desktopOnly {
+    display: none;
+  }
+});
+
 .header-title {
-  font-size: 18px;
+  .m-fontSize(18px);
   font-weight: bold;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }

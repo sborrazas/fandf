@@ -2,12 +2,11 @@
 @import "shared.less";
 
 .banner {
+  .m-fontSize(22px);
   background: rgb(255, 255, 255);
   box-shadow: 0 6px 25px 0 rgba(0, 0, 0, 0.1);
-  font-size: 22px;
   font-weight: 300;
   height: 320px;
-  letter-spacing: 0.05em;
   line-height: 1.55em;
   margin-bottom: 72px;
   padding: 44px 60% 44px 44px;
@@ -37,8 +36,9 @@
 }
 
 .banner-title {
-  font-size: 18px;
+  .m-fontSize(18px, 22px);
   font-weight: bold;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
@@ -52,7 +52,6 @@
     margin-bottom: 42px;
     overflow: hidden;
     padding: 44px 44px 364px; /* 320px + 44px */
-    text-align: center;
   }
   .banner-imgWrapper {
     height: 320px;
@@ -70,9 +69,7 @@
 });
 
 .m-maxMedia(@media-breakpoint-3, {
-  .banner-img,
-  .banner-img:hover {
-    position: absolute;
-    bottom: -60px;
+  .banner {
+    display: none;
   }
 });

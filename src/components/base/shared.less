@@ -1,3 +1,11 @@
+.m-fontSize(@amount, @contextPx: @base--fontSize-1) {
+  font-size: unit((@amount / @contextPx), em);
+}
+
+.m-lineHeight(@amount, @contextPx: @base--fontSize-1) {
+  line-height: unit(@amount / @contextPx);
+}
+
 .m-maxMedia(@maxWidth, @rules) {
   @media screen and (max-width: @maxWidth) {
     @rules();

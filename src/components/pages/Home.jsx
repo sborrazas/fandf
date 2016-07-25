@@ -24,7 +24,9 @@ class Home extends Component {
   render() {
     return (
       <Root>
-        <Header><HeaderTitle>Selected work</HeaderTitle></Header>
+        <Header desktopOnly={true}>
+          <HeaderTitle>Selected work</HeaderTitle>
+        </Header>
         <Banner
           imgSrc="/images/portfolio/roam.png"
           alt="Roam">

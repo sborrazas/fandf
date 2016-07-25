@@ -2,8 +2,8 @@
 @import "shared.less";
 
 .mainHeader {
-  letter-spacing: 0.05em;
-  padding: 72px 0 0;
+  margin-bottom: 2em;
+  padding: 4em 0 0;
   position: relative;
 }
 
@@ -13,30 +13,32 @@
 }
 
 .mainHeader-title {
-  font-size: 18px;
+  .m-fontSize(18px);
   font-weight: bold;
+  letter-spacing: 0.05em;
   line-height: 1.9em;
-  margin-top: 75px;
+  margin-top: 4.2em;
   text-transform: uppercase;
 }
 
 .mainHeader-title--secondary {
-  font-size: 32px;
+  .m-fontSize(32px);
+  .m-lineHeight(46px, 32px);
   font-weight: 300;
-  line-height: 1.44em;
-  margin-top: 14px;
+  letter-spacing: normal;
+  margin-top: 0.44em;
   text-transform: none;
 }
 
 .mainHeader-nav {
+  .m-fontSize(22px);
   float: right;
-  font-size: 22px;
   margin-top: 6px;
 }
 
 .mainHeader-navItem {
   display: inline-block;
-  margin-left: 40px;
+  margin: 0 0.8em;
 }
 
 .mainHeader-splash {
@@ -53,8 +55,5 @@
   .mainHeader-nav {
     float: none;
     text-align: center;
-  }
-  .mainHeader-navItem {
-    margin: 0 20px;
   }
 });

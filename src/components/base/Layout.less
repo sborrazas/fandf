@@ -1,3 +1,6 @@
+@import "variables.less";
+@import "shared.less";
+
 .layout {
   background: rgb(255, 255, 255);
 }
@@ -19,3 +22,9 @@
 .layout-footer {
   margin: 0; /* Placeholder rule so class gets created */
 }
+
+.m-maxMedia(@media-breakpoint-2, {
+  .layout-wrapper {
+    padding: 0 20px;
+  }
+});
