@@ -56,8 +56,8 @@ class Home extends Component {
           alt="Petfinder">
 
           <BannerTitle>PetFinder</BannerTitle>
-          Find your lost pet, help lost pet find their owner and help pets
-          find a home.
+          Help pets find homes. You can also find your lost pet or help lost
+          pets find their owner.
           <BannerNav>
             <Button to="http://petfinder.fandf.io" external={true}>
               Go to site
@@ -66,9 +66,9 @@ class Home extends Component {
         </Banner>
         <Header><HeaderTitle>The way we work</HeaderTitle></Header>
         <Paragraph>
-          We believe in collaboration and we believe in partners. Our
-          transparent process and open communication are the basis for the way
-          we think about and build digital products.
+          We believe in collaboration and partnerships. Our transparent process
+          and open communication are the basis for the way we think about and
+          build digital products.
         </Paragraph>
         <Header><HeaderTitle>What we do</HeaderTitle></Header>
         <Paragraph>

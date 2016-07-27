@@ -64,7 +64,7 @@ class App extends Component {
         <LayoutFooter>
           <MainFooter>
             <MainFooterTitle>Want to work together?</MainFooterTitle>
-            Send us an email to
+            Shoot us an email at
             {" "}<Link
               to={`mailto:${ENCODED_EMAIL}`}
               external={true}
