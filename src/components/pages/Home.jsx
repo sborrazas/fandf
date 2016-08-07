@@ -31,7 +31,7 @@ class Home extends Component {
           imgSrc="/images/portfolio/roam.png"
           alt="Roam">
 
-          <BannerTitle>Roam App</BannerTitle>
+          <BannerTitle>Roam</BannerTitle>
           Your favorite place to discover and collect the best travel
           destinations.
           <BannerNav>
