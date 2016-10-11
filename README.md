@@ -1,4 +1,4 @@
-# ReactJS Static Skeleton
+# Form & Function site
 
 # Development
 
