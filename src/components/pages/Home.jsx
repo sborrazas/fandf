@@ -59,8 +59,10 @@ class Home extends Component {
           Help pets find homes. You can also find your lost pet or help lost
           pets find their owner.
           <BannerNav>
-            <Button to="http://petfinder.fandf.io" external={true}>
-              Go to site
+            <Button to="http://github.com/sborrazas/encuentratumascota"
+              external={true}>
+
+              Go to source
             </Button>
           </BannerNav>
         </Banner>

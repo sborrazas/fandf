@@ -13,7 +13,7 @@ class MainFooter extends Component {
     return (
       <footer className={classes.mainFooter()}>
         <LayoutWrapper>
-          <div className={classes.inner()}>{this.props.children}</div>
+          {this.props.children}
         </LayoutWrapper>
       </footer>
     );

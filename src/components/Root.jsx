@@ -28,7 +28,7 @@ import {
   SOCIAL,
 } from "config/settings.js";
 
-const { TWITTER, INSTAGRAM, EMAIL, } = SOCIAL;
+const { EMAIL, } = SOCIAL;
 const ENCODED_EMAIL = htmlEncoder(EMAIL);
 
 class App extends Component {
@@ -46,12 +46,6 @@ class App extends Component {
                 <Link to={`mailto:${ENCODED_EMAIL}`} external={true}>
                   {ENCODED_EMAIL}
                 </Link>
-              </MainHeaderNavItem>
-              <MainHeaderNavItem>
-                <Link to={TWITTER} external={true}>Twitter</Link>
-              </MainHeaderNavItem>
-              <MainHeaderNavItem>
-                <Link to={INSTAGRAM} external={true}>Instagram</Link>
               </MainHeaderNavItem>
             </MainHeaderNav>
             <MainHeaderTitle>{TAGLINE}</MainHeaderTitle>
@@ -71,24 +65,8 @@ class App extends Component {
               secondary={true}>
 
               {ENCODED_EMAIL}
-            </Link>
-            {" "}or reach us in
-            {" "}<Link
-              to={TWITTER}
-              external={true}
-              secondary={true}>
-
-              Twitter
-            </Link>
-            {" "}or
-            {" "}<Link
-              to={INSTAGRAM}
-              external={true}
-              secondary={true}>
-
-              Instagram
-            </Link>.
-            We'd love to chat.
+            </Link>,
+            we'd love to chat.
           </MainFooter>
         </LayoutFooter>
       </Layout>

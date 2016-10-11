@@ -4,7 +4,5 @@ export const DESCRIPTION = "We are a small team of creative professionals who ar
 export const KEYWORDS = "montevideo, uruguay, apps, software, development, design, ux, studio, agency";
 export const AUTHORS = "Sebastian Borrazas, Santiago Alonso";
 export const SOCIAL = {
-  INSTAGRAM: "http://instagram.com/fandfio",
-  TWITTER: "http://twitter.com/fandfio",
   EMAIL: "hello@fandf.io",
 };
