@@ -44,13 +44,15 @@
     - include_role:
         name: deploy.assets
       vars:
-        source_dir: "{{ playbook_dir | dirname }}/public/{{ item }}"
-        dest_dir: "{{ release_dir }}/public/{{ item }}"
+        source_dir: "{{ playbook_dir | dirname }}/public"
+        dest_dir: "{{ release_dir }}/public"
         files:
           - index.js
-          - stylesheets/main.css
-          - fonts
+          - stylesheets/
+          - fonts/
           - index.html
+      tags:
+        - remote
 
     - name: symlink to app directoy exists
       file:

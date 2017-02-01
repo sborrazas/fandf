@@ -70,14 +70,14 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin(
-      path.join("stylesheets", "[name].css"),
+      path.join("stylesheets", "application.css"),
       {
         allChunks: true,
       }
     ),
     new StaticSiteGeneratorPlugin("main", PATHS, {
       stylesheets: [
-        "stylesheets/main.css",
+        "stylesheets/application.css",
       ],
     }),
   ],

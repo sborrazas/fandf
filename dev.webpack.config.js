@@ -1,8 +1,4 @@
 var path = require("path");
-var WebpackIsomorphicToolsPlugin = require("webpack-isomorphic-tools/plugin");
-var webpackIsomorphicToolsPlugin = new WebpackIsomorphicToolsPlugin(
-  require("./webpack.isomorphictools.config.js")
-);
 
 module.exports = {
   entry: path.join(__dirname, "src", "index.js"),
@@ -12,9 +8,9 @@ module.exports = {
   resolve: {
     extensions: ["", ".js", ".jsx"],
     alias: {
-      components: path.join(__dirname, "src", "components"),
-      config: path.join(__dirname, "src", "config"),
-      utils: path.join(__dirname, "src", "utils"),
+      "components": path.join(__dirname, "src", "components"),
+      "config": path.join(__dirname, "src", "config"),
+      "utils": path.join(__dirname, "src", "utils"),
     }
   },
   output: {

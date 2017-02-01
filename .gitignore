@@ -1,1 +1,4 @@
 node_modules/
+public/fonts
+public/stylesheets
+public/index.js
