@@ -24,7 +24,7 @@ module.exports = {
     },
   },
   output: {
-    path: path.join(__dirname, "dist"),
+    path: path.join(__dirname, "public"),
     filename: "index.js",
     libraryTarget: "umd",
   },
@@ -45,27 +45,26 @@ module.exports = {
           "css?modules&importLoaders=2&sourceMap!autoprefixer-loader?browsers=last 2 versions!less?outputStyle=expanded&sourceMap=true&sourceMapContents=true"
         ),
       },
-      {
-        test: webpackIsomorphicToolsPlugin.regular_expression("images"),
-        loader: "url-loader?limit=153600",
-      },
       // FONTS
       {
         test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
-        loader: "url?limit=10000&mimetype=application/font-woff&name=/fonts/[hash].[ext]"
+        loader: "url?limit=10000&mimetype=application/font-woff&publicPath=/fonts/&outputPath=fonts/"
       },
       {
         test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
-        loader: "url?limit=10000&mimetype=application/font-woff&name=/fonts/[hash].[ext]"
+        loader: "url?limit=10000&mimetype=application/font-woff&publicPath=/fonts/&outputPath=fonts/"
       },
       {
         test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-        loader: "url?limit=10000&mimetype=application/octet-stream&name=/fonts/[hash].[ext]"
+        loader: "url?limit=10000&mimetype=application/octet-stream&publicPath=/fonts/&outputPath=fonts/"
       },
-      { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file" },
+      {
+        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        loader: "file?publicPath=/fonts/&outputPath=fonts/"
+      },
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-        loader: "url?limit=10000&mimetype=image/svg+xml&name=/fonts/[hash].[ext]"
+        loader: "url?limit=10000&mimetype=image/svg+xml&publicPath=/fonts/&outputPath=fonts/"
       },
     ]
   },

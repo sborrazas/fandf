@@ -14,7 +14,7 @@ npm install
 
 ```
 npm run start # Assets watching
-python3 -m http.server # Server
+(cd public && python3 -m http.server) # Server
 ```
 
 Go to [http://localhost:8000](http://localhost:8000).
