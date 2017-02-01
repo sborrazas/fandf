@@ -28,8 +28,10 @@ import {
   SOCIAL,
 } from "config/settings.js";
 
-const { EMAIL, } = SOCIAL;
+const { EMAIL, SEBA_EMAIL, SAN_EMAIL } = SOCIAL;
 const ENCODED_EMAIL = htmlEncoder(EMAIL);
+const SEBA_ENCODED_EMAIL = htmlEncoder(SEBA_EMAIL);
+const SAN_ENCODED_EMAIL = htmlEncoder(SAN_EMAIL);
 
 class App extends Component {
   render() {
@@ -58,15 +60,22 @@ class App extends Component {
         <LayoutFooter>
           <MainFooter>
             <MainFooterTitle>Want to work together?</MainFooterTitle>
-            Shoot us an email at
+            You can shoot us an email or contact either
             {" "}<Link
-              to={`mailto:${ENCODED_EMAIL}`}
+              to={`mailto:${SAN_ENCODED_EMAIL}`}
               external={true}
               secondary={true}>
 
-              {ENCODED_EMAIL}
-            </Link>,
-            we'd love to chat.
+              San
+            </Link>
+            {" "}or
+            {" "}<Link
+              to={`mailto:${SEBA_ENCODED_EMAIL}`}
+              external={true}
+              secondary={true}>
+
+              Seba
+            </Link>.
           </MainFooter>
         </LayoutFooter>
       </Layout>

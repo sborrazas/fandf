@@ -5,4 +5,6 @@ export const KEYWORDS = "montevideo, uruguay, apps, software, development, desig
 export const AUTHORS = "Sebastian Borrazas, Santiago Alonso";
 export const SOCIAL = {
   EMAIL: "hello@fandf.io",
+  SEBA_EMAIL: "seba.borrazas@gmail.com",
+  SAN_EMAIL: "hi@madebysan.com",
 };
