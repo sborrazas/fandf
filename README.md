@@ -48,7 +48,7 @@ Make sure the production configuration file is complete, then run the provision
 or deploy Ansible playbooks.
 
 ```
-make provision-production
+make provision
 # or
-make deploy-production
+make deploy
 ```
