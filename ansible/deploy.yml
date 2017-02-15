@@ -36,11 +36,6 @@
       tags:
         - remote
 
-    - name: assets | compile assets locally
-      local_action: command npm run dist
-      tags:
-        - remote
-
     - include_role:
         name: deploy.assets
       vars:
@@ -49,7 +44,6 @@
         files:
           - index.js
           - stylesheets/
-          - fonts/
           - index.html
       tags:
         - remote

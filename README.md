@@ -27,7 +27,6 @@ First clone the repo and install all Ansible extensions.
 
 ```
 git clone git@github.com:sborrazas/fandf.git
-ansible-galaxy install -r ansible/requirements.yml
 ```
 
 ## Provision & deploy

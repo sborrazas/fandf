@@ -1,10 +1,6 @@
 var path = require("path");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 const StaticSiteGeneratorPlugin = require("static-site-generator-webpack-plugin");
-var WebpackIsomorphicToolsPlugin = require("webpack-isomorphic-tools/plugin");
-var webpackIsomorphicToolsPlugin = new WebpackIsomorphicToolsPlugin(
-  require("./webpack.isomorphictools.config.js")
-);
 
 const PATHS = [
   "/",
